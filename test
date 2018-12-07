@@ -1,0 +1,6 @@
+FILE=/usr/share/dict/words
+if [ -n "$1" ]
+then
+	FILE="$1"
+fi
+cat $FILE | ./lzp -c | ./lzp -c | ./lzp -c | ./lzp -c | ./lzp -c | ./lzp -c | ./lzp -c | ./lzp -c | ./lzp -c | ./lzp -c | ./lzp -d | ./lzp -d | ./lzp -d | ./lzp -d | ./lzp -d | ./lzp -d | ./lzp -d | ./lzp -d | ./lzp -d | ./lzp -d | cmp -s $FILE || echo "compare failed"
